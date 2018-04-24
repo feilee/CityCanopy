@@ -1,0 +1,3 @@
+*.kde4
+build*
+*.pro.user

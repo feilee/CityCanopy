@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>630</width>
+    <height>565</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>630</width>
+    <height>565</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="GLWidget" name="openGLWidget">
+      <property name="minimumSize">
+       <size>
+        <width>463</width>
+        <height>495</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="maximumSize">
+       <size>
+        <width>120</width>
+        <height>144</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="openTopoButton">
+         <property name="text">
+          <string>Add Topo</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="openUrbanButton">
+         <property name="text">
+          <string>Add Urban</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="openOSMButton">
+         <property name="text">
+          <string>Add OSM</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exportButton">
+         <property name="text">
+          <string>Export</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="clearButton">
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>630</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchive">
+    <property name="title">
+     <string>Archive</string>
+    </property>
+    <addaction name="actionLoad_topo"/>
+    <addaction name="actionLoad_urban"/>
+    <addaction name="actionLoad_osm"/>
+   </widget>
+   <addaction name="menuArchive"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNested">
+   <property name="text">
+    <string>Load topo</string>
+   </property>
+  </action>
+  <action name="actionBoton_nuevo">
+   <property name="text">
+    <string>boton nuevo</string>
+   </property>
+  </action>
+  <action name="actionLoad_topo">
+   <property name="text">
+    <string>Load topo</string>
+   </property>
+  </action>
+  <action name="actionLoad_urban">
+   <property name="text">
+    <string>Load urban</string>
+   </property>
+  </action>
+  <action name="actionLoad_osm">
+   <property name="text">
+    <string>Load osm</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>viz/gl/glwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
